@@ -43,17 +43,21 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['login'])) {
             </ul>
         </nav>
         <image src = "media/logo.jpg" width="80px" height="80px">
-        <form method="post" action="">
-        <label for="username">Username:</label>
-        <input type="text" id="username" name="username" required>
+            <?php if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true): ?>
+            <form method="post" action="">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
 
-        <label for="password">Password:</label>
-        <input type="password" id="password" name="password" required>
-        <?php if (isset($errorMessage)): ?>
-                <p class="error-message"><?php echo $errorMessage; ?></p>
-        <?php endif; ?>
-        <button type="submit" name="login">Login</button>
-    </form>
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+                <?php if (isset($errorMessage)): ?>
+                            <p class="error-message"><?php echo $errorMessage; ?></p>
+                <?php endif; ?>
+                <button type="submit" name="login">Login</button>
+            </form>
+            <?php endif; ?>
+            <?php if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] === true) : ?>
+                <button
     </header>
 
     <section class="main-content">
