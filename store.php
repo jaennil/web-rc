@@ -62,7 +62,6 @@
             <p>Телефон: +7 (123) 456-7890</p>
             <p>Email: contact@videocarder.com</p>
         </div>
-        <!-- Копирайт и другая информация -->
     </footer>
 </body>
 </html>

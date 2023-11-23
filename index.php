@@ -56,7 +56,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['login'])) {
                 <button type="submit" name="login">Login</button>
             </form>
             <?php endif; ?>
-            <?php if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] === true) : ?>
     </header>
 
     <section class="main-content">
