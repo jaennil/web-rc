@@ -25,7 +25,7 @@
             <p><strong>Email:</strong> info@videocarder.com</p>
             <p><strong>Телефон:</strong> +7 (123) 456-7890</p>
         </address>
-
+        <?php if (isset($_SESSION['loggedin']) || $_SESSION['loggedin'] === true): ?>
         <h2>Форма обратной связи</h2>
         <form action="process_form.php" method="post">
             <label for="name">Ваше Имя:</label>
@@ -39,6 +39,7 @@
 
             <button type="submit">Отправить</button>
         </form>
+        <?php endif; ?>
     </section>
 
     <footer>

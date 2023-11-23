@@ -4,6 +4,7 @@ function validateCredentials($enteredUsername, $enteredPassword)
 {
     include_once("database.php");
     $enteredUsername = $conn->real_escape_string($enteredUsername);
+    $enteredPassword = $conn->real_escape_string($enteredPassword);
 
     $sql = "SELECT * FROM User WHERE username = '$enteredUsername' and password = '$enteredPassword'";
     $result = $conn->query($sql);
